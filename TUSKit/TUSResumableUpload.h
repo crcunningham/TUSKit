@@ -39,7 +39,6 @@ typedef void (^TUSUploadProgressBlock)(int64_t bytesWritten, int64_t bytesTotal)
 */
  @property (readonly) BOOL complete;
  
-
 /**
  The upload is idle if no HTTP tasks are currently outstanding for it
  */
@@ -49,6 +48,12 @@ typedef void (^TUSUploadProgressBlock)(int64_t bytesWritten, int64_t bytesTotal)
  The current state of the upload
  */
 @property (readonly) TUSResumableUploadState state;
+
+/**
+ The metadata that was passed during the creation of this upload. Note: Additional keys may
+ have be added during the upload process
+ */
+@property (nonatomic, strong, readonly) NSDictionary <NSString *, NSString *> *metadata;
 
 /**
  Permanently cancel this upload.  If cancelled, it cannot be resumed
