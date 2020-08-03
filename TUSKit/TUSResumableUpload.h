@@ -53,7 +53,7 @@ typedef void (^TUSUploadProgressBlock)(int64_t bytesWritten, int64_t bytesTotal)
  The metadata that was passed during the creation of this upload. Note: Additional keys may
  have be added during the upload process
  */
-@property (nonatomic, strong, readonly) NSDictionary <NSString *, NSString *> *metadata;
+@property (nonatomic, strong, readonly) NSDictionary <NSString *, NSString *> * _Nonnull metadata;
 
 /**
  Permanently cancel this upload.  If cancelled, it cannot be resumed
